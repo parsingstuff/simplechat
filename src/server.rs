@@ -46,9 +46,10 @@ fn read_streams(sarc : &Arc<Mutex<HashMap<usize,TcpStream>>>, barc : &Arc<Mutex<
         }
     });
 
-    for i in removals { 
+    removals.iter().foreach(|i| { 
         shash.remove(&i);
-    }
+    });
+                        
 }
 
 fn write_streams(sarc : &Arc<Mutex<HashMap<usize,TcpStream>>>, barc : &Arc<Mutex<HashMap<usize, Vec<u8>>>>) { 
