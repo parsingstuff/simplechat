@@ -1,0 +1,11 @@
+[package]
+name = "chat"
+version = "0.1.0"
+authors = ["jfh"]
+
+[dependencies]
+itertools = "0.7.6"
+
+[[bin]]
+name = "server"
+path = "src/server.rs"
